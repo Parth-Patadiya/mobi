@@ -1,0 +1,105 @@
+<!-- SECTION -->
+<nav id="navigation">
+    <!-- container -->
+    <div class="header-logo">
+        <a href="#" routerLink="/home" class="logo">
+            <img src="../assets/img/logo1.png" style="width: 100px;" alt="">
+        </a>
+    </div>
+    <div class="container">
+        <!-- responsive-nav -->
+        <div id="responsive-nav">
+            <!-- NAV -->
+            <ul class="main-nav nav navbar-nav">
+                <li class="active"><a (click)="filter('')">Home</a></li>
+
+
+                <li>
+
+                </li>
+                <li>
+                    <a (click)="filter('Apple')">Apple</a>
+                </li>
+                <li>
+                    <a (click)="filter('Android')">Android</a>
+                </li>
+            </ul>
+            <!-- /NAV -->
+        </div>
+
+        <!-- ACCOUNT -->
+        <div>
+            <div class="header-ctn">
+                <!-- Wishlist -->
+
+                <!-- /Wishlist -->
+
+                <!-- Cart -->
+                <div class="dropdown">
+                    <!-- <button routerLink="cart"> -->
+                    <a href="" routerLink="/cart" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+                        <i class="fa fa-shopping-cart" style="color: black;"></i>
+                        <span style="color: black;">Your Cart</span>
+                        <div class="qty">{{total_i}}</div>
+                    </a>
+                    <!-- </button> -->
+                </div>
+
+                <!-- /Cart -->
+
+                <!-- Menu Toogle -->
+                <div class="menu-toggle">
+                    <a href="#">
+                        <i class="fa fa-bars"></i>
+                        <span>Menu</span>
+                    </a>
+                </div>
+                <!-- /Menu Toogle -->
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- container -->
+<div class="container">
+    <!-- row -->
+    <div class="row">
+        <!-- Products tab & slick -->
+
+        <!-- tab -->
+
+        <ng-container *ngFor="let item of filterCategory">
+            <div class="card col-md-4" data-nav="#slick-nav-1" style="margin-bottom:5ch;">
+                <!-- product -->
+
+                <div class="product">
+                    <div class="product-img">
+                        <img src="{{item.image}}" style="height: 450px;" alt="">
+                    </div>
+                    <div class="product-body">
+                        <p class="product-category">{{item.description}}</p>
+                        <h3 class="product-name"><a href="#">{{item.title}}</a></h3>
+                        <h4 class="product-price">₹{{item.price}}</h4>
+                    </div>
+
+                    <div class="add-to-cart">
+                        <button class="add-to-cart-btn" (click)=addtocart(item)><i class="fa fa-shopping-cart"></i> add to cart</button>
+                    </div>
+                </div>
+
+                <!-- /product -->
+            </div>
+        </ng-container>
+
+
+        <!-- /tab -->
+
+
+    </div>
+</div>
+
+<!-- Products tab & slick -->
+
+<!-- /row -->
+
+<!-- /SECTION -->

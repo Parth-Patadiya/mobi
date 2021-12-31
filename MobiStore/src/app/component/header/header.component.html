@@ -1,0 +1,51 @@
+<header>
+    <!-- TOP HEADER -->
+    <div id="top-header">
+        <div class="container">
+            <ul class="header-links pull-left">
+                <li style="color: white;"><i class="fa fa-phone"></i> +91 12345 67890</li>
+                <li style="color: white;"><i class="fa fa-envelope-o"></i> mobistore@gmail.com</li>
+                <li style="color: white;"><i class="fa fa-map-marker"></i> SG Highway Ahmedabad</li>
+            </ul>
+            <ul class="header-links pull-right">
+
+                <ng-container *ngIf=demo()>
+                    <li style="color: white;"><i class="fa fa-user-o"></i>{{email.uemail}}</li>
+                    <button id="btn" (click)="logout_user()" type="submit" class="btn btn-success ">Logout</button>
+                </ng-container>
+                <ng-container *ngIf="demo()!=true">
+                    <a href="../login/">
+                        <li style="color: white;"><i class="fa fa-user-o"></i>Login</li>
+                    </a>
+                </ng-container>
+            </ul>
+        </div>
+    </div>
+    <!-- /TOP HEADER -->
+
+    <!-- MAIN HEADER -->
+    <div id="header">
+        <!-- container -->
+        <div class="container">
+            <!-- row -->
+            <div class="row">
+                <!-- LOGO -->
+                <div class="col-md-3">
+                    <div class="header-logo">
+                        <a href="#" routerLink="/home" class="logo">
+                            <img src="../assets/img/logo1.png" style="margin-left: 0ch;width: 50px;" alt="">
+                        </a>
+                    </div>
+                </div>
+                <!-- /LOGO -->
+
+                <!-- NAVIGATION -->
+
+                <!-- /ACCOUNT -->
+            </div>
+            <!-- row -->
+        </div>
+        <!-- container -->
+    </div>
+    <!-- /MAIN HEADER -->
+</header>
